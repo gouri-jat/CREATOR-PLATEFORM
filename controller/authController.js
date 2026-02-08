@@ -34,6 +34,7 @@ exports.registerUser = async(req,res)=>{
 
 //Login
 exports.loginUser = async(req,res)=>{
+    const {email,password} = req.body;
     try{
         const user = await User.findOne({email});
         if(!user){
@@ -57,3 +58,5 @@ exports.loginUser = async(req,res)=>{
 res.status(500).json({error:error.message});
     }
 };
+
+    
