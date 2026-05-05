@@ -11,9 +11,9 @@ exports.becomeCreator = async(req,res)=>{
         }
         user.isCreator = true;
         user.creatorProfile = {
-            bio:req.body.bio ||" ",
-            category : req.body.category || " ",
-            ProfileImage : req.body.profileImage || " ",
+            bio:req.body.bio ||"",
+            category : req.body.category || "",
+            profileImage : req.body.profileImage || "",
                 };
                 await user.save();
                 res.status(200).json({
