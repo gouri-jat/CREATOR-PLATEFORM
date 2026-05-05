@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     },
     isCreator :{
         type:Boolean,
-        default:"false"
+        default:false
     },
      creatorProfile: {
       bio: String,
@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
       },
     ],
   
-},{timeStamps : true});
+},{timestamps : true});
 
 
 module.exports =  mongoose.model("User",userSchema);
